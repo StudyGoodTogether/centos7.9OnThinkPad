@@ -10,7 +10,15 @@
 
  通过 ls /dev 查看，是sda1 .. sda4
 
- 
+
+#### 跟新相关的操作
+sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+sudo yum clean all
+sudo yum makecache
+sudo yum update -y
+
+
 
 #### 关闭笔记本盖子时系统不关机，可以通过修改电源管理设置来实现。以下是如何操作的步骤：
 
